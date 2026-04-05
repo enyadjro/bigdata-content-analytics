@@ -7,7 +7,8 @@
 ![Use%20Case](https://img.shields.io/badge/Use%20Case-Content%20Strategy-red)
 ![Focus](https://img.shields.io/badge/Focus-Scalable%20Analytics-lightgrey)
 
----
+> Scalable Spark-based analytics pipeline that transforms large-scale IMDb data into actionable insights for content investment, talent strategy, and international expansion.
+
 This project uses Spark and Scala to analyze large-scale film and television metadata for strategic content insights. The pipeline combines distributed joins, window functions, ranking, and threshold-based filtering to uncover genre trends, benchmark top series, evaluate director performance, and assess localization patterns.
 
 ---
@@ -56,29 +57,27 @@ This project reframes large-scale IMDb-style data as a decision-support system f
 ## Key Results
 
 - **Genre Trend Detection (Decade-Level Analysis)**
-  - Identified top genres with the largest rating increases over rolling 10-year windows
-  - Revealed long-term high-performing genres (e.g., sustained dominance of Animation and Action)
+  - Action (**+0.68**), Sci-Fi (**+0.65**), and War (**+0.60**) showed the largest increases in rolling 10-year average ratings
   - Supports **content investment timing and genre portfolio strategy**
 
 - **Director Performance Analytics**
-  - Ranked directors by average rating with minimum production thresholds (≥10 films)
-  - Identified consistently high-performing directors across genres
+  - Christopher Nolan led with an average rating of **8.22** across **10** qualifying films
+  - Other top performers include Hayao Miyazaki, Satyajit Ray, Quentin Tarantino, and Peter Jackson
   - Enables **data-driven talent investment and partnership decisions**
 
 - **TV Series Benchmarking**
-  - Benchmarked long-running series using rating, episode frequency, and vote thresholds
-  - Identified top-performing series vs industry baseline
+  - *Choufli Hal* achieved an average rating of **9.70**, outperforming the comparison group by **0.87**
   - Supports **content acquisition and programming strategy**
 
 - **Localization Strategy (French Market Example)**
-  - Quantified share of high-quality drama content among translated titles
-  - Found significant concentration of strong-performing drama in localized content
+  - **26%** of qualifying French-translated titles were drama titles linked to directors with strong non-drama performance
   - Guides **international expansion and localization prioritization**
 
 ---
 
 ## Sample Outputs
 
+All outputs are generated directly from the Spark pipeline (`scripts/spark_content_analytics.scala`) and saved for reproducibility.
 Representative outputs from the Spark pipeline are included in `outputs/tables/`:
 
 - `top_genre_trends.csv` — top genres with the largest increases in rolling 10-year average ratings
@@ -92,6 +91,12 @@ Representative outputs from the Spark pipeline are included in `outputs/tables/`
 - **Top directors by average rating:** Christopher Nolan, Hayao Miyazaki, Satyajit Ray, Quentin Tarantino, and Peter Jackson
 - **Top TV series benchmark:** *Choufli Hal*, *The Why Files*, and *Ever After High*
 - **Localization insight:** 26% of French-translated titles in the qualifying set were drama titles linked to directors with strong non-drama performance
+---
+
+## Example Visualization
+
+![Top Genre Rating Increases](outputs/figures/genre_trends.png)
+
 ---
 
 ## Interpretability & Business Impact
@@ -127,19 +132,36 @@ Representative outputs from the Spark pipeline are included in `outputs/tables/`
 
 ### Key Takeaway
 
-This project demonstrates how large-scale data processing with Spark can be translated into **actionable business insights**, bridging the gap between distributed analytics and strategic decision-making in the media industry.  
+This project demonstrates how distributed data processing with Spark can be translated into **actionable business insights**, bridging large-scale analytics and strategic decision-making.
+---
 
+## Tech Stack
+
+- **Languages:** Scala, SQL, Python (visualization)
+- **Frameworks:** Apache Spark
+- **Techniques:** Distributed joins, window functions, ranking, filtering
+- **Data Processing:** Large-scale TSV ingestion and transformation
+- **Visualization:** Matplotlib
 ---
 
 ## Repository Structure
-```
+```text
 bigdata-content-analytics/
 ├── scripts/
-│ └── spark_content_analytics.scala
+│   └── spark_content_analytics.scala
 ├── outputs/
-│ ├── tables/
-│ └── figures/
+│   ├── tables/
+│   │   ├── top_genre_trends.csv
+│   │   ├── top_directors.csv
+│   │   ├── top_tv_series.csv
+│   │   └── localization_summary.csv
+│   └── figures/
 ├── docs/
 ├── data/
 └── README.md
 ```
+---
+## Reproducibility
+
+The full analysis pipeline can be executed in a Spark environment (e.g., Hortonworks/Zeppelin).  
+Outputs shown in this repository were generated from the included Scala script.
