@@ -1,13 +1,14 @@
 # Streaming-Scale Content Analytics with Spark: Genre Trends, Talent Performance, and Market Insights
 
-This project uses Spark and Scala to analyze large-scale film and television metadata for strategic content insights. The pipeline combines distributed joins, window functions, ranking, and threshold-based filtering to uncover genre trends, benchmark top series, evaluate director performance, and assess localization patterns.
-
 ![Language](https://img.shields.io/badge/Language-Scala-blue)
 ![Framework](https://img.shields.io/badge/Framework-Apache%20Spark-orange)
 ![Data](https://img.shields.io/badge/Data-Big%20Data-green)
 ![Techniques](https://img.shields.io/badge/Techniques-Window%20Functions%20%7C%20Joins-purple)
 ![Use%20Case](https://img.shields.io/badge/Use%20Case-Content%20Strategy-red)
 ![Focus](https://img.shields.io/badge/Focus-Scalable%20Analytics-lightgrey)
+
+---
+This project uses Spark and Scala to analyze large-scale film and television metadata for strategic content insights. The pipeline combines distributed joins, window functions, ranking, and threshold-based filtering to uncover genre trends, benchmark top series, evaluate director performance, and assess localization patterns.
 
 ---
 
