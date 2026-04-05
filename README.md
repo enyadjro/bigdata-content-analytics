@@ -79,15 +79,19 @@ This project reframes large-scale IMDb-style data as a decision-support system f
 
 ## Sample Outputs
 
-Key outputs from the Spark pipeline include:
+Representative outputs from the Spark pipeline are included in `outputs/tables/`:
 
-- Top genre trends over rolling decades (investment signals)
-- Director performance rankings (talent strategy)
-- TV series benchmarking (content performance)
-- Localization insights (international strategy)
+- `top_genre_trends.csv` — top genres with the largest increases in rolling 10-year average ratings
+- `top_directors.csv` — highest-performing directors meeting production and vote thresholds
+- `top_tv_series.csv` — benchmark of top long-running TV series against comparable titles
+- `localization_summary.csv` — share of high-quality drama content among French-translated titles
 
-(See `outputs/tables/` and `outputs/figures/` for full results)
+### Example Highlights
 
+- **Top genre trend opportunities:** Action, Sci-Fi, and War showed the largest gains in rolling decade-average ratings
+- **Top directors by average rating:** Christopher Nolan, Hayao Miyazaki, Satyajit Ray, Quentin Tarantino, and Peter Jackson
+- **Top TV series benchmark:** *Choufli Hal*, *The Why Files*, and *Ever After High*
+- **Localization insight:** 26% of French-translated titles in the qualifying set were drama titles linked to directors with strong non-drama performance
 ---
 
 ## Interpretability & Business Impact
