@@ -1,5 +1,7 @@
 # Streaming-Scale Content Analytics with Spark: Genre Trends, Talent Performance, and Market Insights
 
+Scalable Spark-based analytics pipeline for processing large datasets using distributed computing and SQL workflows.
+
 ![Language](https://img.shields.io/badge/Language-Scala-blue)
 ![Framework](https://img.shields.io/badge/Framework-Apache%20Spark-orange)
 ![Data](https://img.shields.io/badge/Data-Big%20Data-green)
