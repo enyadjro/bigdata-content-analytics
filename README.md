@@ -135,6 +135,7 @@ Representative outputs from the Spark pipeline are included in `outputs/tables/`
 ### Key Takeaway
 
 This project demonstrates how distributed data processing with Spark can be translated into **actionable business insights**, bridging large-scale analytics and strategic decision-making.
+
 ---
 
 ## Tech Stack
